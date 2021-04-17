@@ -113,12 +113,12 @@
     
   }
   
-  #hamburger {
+  #menu {
     display: none;
     height: var(--inaltime-meniu);
   }
   
-  #hamburger img {
+  #menu img {
     height: 100%;
     width: auto;
   }
@@ -151,6 +151,13 @@
     color: black;
     -webkit-transform: translate(1px, 0px);
             transform: translate(1px, 0px);
+  }
+  
+  ul li ul li:hover .arrow {
+    color: black;
+    -webkit-transform: translate(1px, 0px);
+            transform: translate(1px, 0px);
+  } 0px);
   }
   
   ul li ul li:hover .arrow {
