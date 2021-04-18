@@ -1,0 +1,55 @@
+.row1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  
+    width: 100%;
+  }
+  
+  .row2 {
+    margin-left:15vh;
+    display: flex;
+    flex-direction: row;
+  
+    width: 100%;
+  }
+  
+  .column2 {
+    display: flex;
+    flex-direction: column;
+    border:3px solid rgb(143, 18, 74);
+    
+  }
+  
+  .flexboxitem a{
+    text-decoration:none;
+    width:100px;
+    height:50px;
+  
+    
+    display:flex;
+   
+    margin-left:0.5v;
+    margin-right:0.5vh;
+  
+    border:1px solid rgb(143, 18, 74);
+  
+    border-radius: 5px 5px 0px 0px;
+    background:white;
+    color:rgb(56, 8, 30);
+    justify-content: center;
+    align-items:center;
+  
+  }
+  
+  .flexboxitem a:hover{
+    color:white;
+  
+    background-image: none;
+    background-color: rgb(143, 18, 74);
+    transition: 0.2s;
+  }
+  
+  .lista-menu li a{
+    padding-left: 10px;
+  }

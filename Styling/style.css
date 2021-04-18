@@ -1,6 +1,12 @@
 @import 'menu.css';
 /* @import 'menu500.css';
 @import 'menu1200.css'; */
+@import 'iframe.css';
+@import 'hr.css';
+@import 'banner.css';
+@import 'tabel.css';
+@import 'to-top.css';
+
 
 :root {
   --color1: #006A82;
@@ -14,7 +20,6 @@
 html{
   font-size: 20px;
 }
-
 
 body {
   font-family: Georgia, serif;
@@ -106,65 +111,15 @@ body {
   grid-area: section8;
 }
 
-.stil{
-  border: 0;
-  height: 30px;
-  background: radial-gradient(circle 10px, var(--color1) 4px, var(--color5) 6px, transparent 2px),
-              linear-gradient(to bottom, var(--color2) 20%, var(--color1) 50%,var(--color2) 80%);
-  margin: 10px;
-              
-}
 
-.row1 {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
 
-  width: 100%;
-}
+/* TABELU */
 
-.row2 {
-  margin-left:15vh;
-  display: flex;
-  flex-direction: row;
 
-  width: 100%;
-}
 
-.column2 {
-  display: flex;
-  flex-direction: column;
-  border:3px solid rgb(143, 18, 74);
-  
-}
+/* BANNER */
 
-.flexboxitem a{
-  text-decoration:none;
-  width:100px;
-  height:50px;
 
-  
-  display:flex;
- 
-  margin-left:0.5v;
-  margin-right:0.5vh;
 
-  border:1px solid rgb(143, 18, 74);
-
-  border-radius: 5px 5px 0px 0px;
-  background:white;
-  color:rgb(56, 8, 30);
-  justify-content: center;
-  align-items:center;
-
-}
-
-.flexboxitem a:hover{
-  color:white;
-
-  background-image: none;
-  background-color: rgb(143, 18, 74);
-  transition: 0.2s;
-}
 
 /*# sourceMappingURL=style.css.map */
