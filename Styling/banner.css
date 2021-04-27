@@ -1,5 +1,6 @@
 .banner
 {
+
   border: 0.4rem solid var(--color3);
   visibility: hidden;
   position: fixed;
