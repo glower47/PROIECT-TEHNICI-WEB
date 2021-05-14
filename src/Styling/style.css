@@ -1,0 +1,126 @@
+@import 'menu.css';
+/* @import 'menu500.css';
+@import 'menu1200.css'; */
+@import 'iframe.css';
+@import 'hr.css';
+@import 'banner.css';
+@import 'tabel.css';
+@import 'to-top.css';
+
+
+:root {
+  --color1: #006A82;
+  --color2: #6AE2FC;
+  --color3: #00CCFA;
+  --color4: #318EA3;
+  --color5: #00A5C9;
+
+}
+
+html{
+  font-size: 20px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Georgia, serif;
+}
+
+.home-page {
+  margin: 20px;
+  padding: 10px;
+}
+
+.gray {
+  color: #5e5e5e;
+}
+
+.continut {
+  border-left: 5px solid var(--color5);
+  border-right: 5px solid var(--color5);
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* #CollapseExample {
+    background-image: linear-gradient(to bottom, var(--color4), var(--color2));
+} */
+/* .nav-link {
+   
+    box-shadow: 0 1px 2px var(--color5);
+    transition: box-shadow 3.3s ease-in;
+}
+
+.nav-link:hover {
+    box-shadow: inset 0 5px 15px var(--color1);
+} */
+
+
+.HR {
+  width: 1000px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color2)), to(var(--color1)));
+  background-image: linear-gradient(to bottom, var(--color2), var(--color1));
+  border-top: 5px solid var(--color1);
+  background-image: radial-gradient(circle, red, green);
+}
+
+.grid-container {
+  display: grid;
+  background-color: var(--color2);
+  padding: 20px;
+  margin-top: 0px;
+  grid-template-areas: "section1 section1 section1 section1"
+  "section5 section6 section6 section7"
+  "section3 section3 section2 section2"
+  "section4 section4 section2 section2"
+  "section8 section8 section8 section8";
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: var(--color3);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.section1 {
+  grid-area: section1;
+}
+
+.section5 {
+  grid-area: section5;
+}
+
+.section6 {
+  grid-area: section6;
+}
+
+.section7 {
+  grid-area: section7;
+}
+.section3 {
+  grid-area: section3;
+}
+.section2 {
+  grid-area: section2;
+}
+.section4 {
+  grid-area: section4;
+}
+.section8 {
+  grid-area: section8;
+}
+
+
+
+/* TABELU */
+
+
+
+/* BANNER */
+
+
+
+
+/*# sourceMappingURL=style.css.map */

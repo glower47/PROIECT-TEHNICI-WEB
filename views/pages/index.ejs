@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../fragments/standardHead.ejs") %>
+    
+    <title>SBP</title>
+    
+</head>
+<body>
+    <%- include("../fragments/header.ejs") %>
+    <div class="grid-container"> <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <div class="section1">
+        <section>
+          <div class="container-fluid home-page">
+            <h2> This is SBP ( <b> Small Businesses Promoting </b> - WebSite)</h2>
+            <p class="gray" style="font-size: 20px;">
+                Tema si scopul acestui site este de a promova si de a ajuta afacerile mici sa se lanseze pe piata romaneasca / internationala
+            </p>
+            <p class="">
+                Oferim diverse pachete si oferte potrivite pentru fiecare tip de afacere precum:
+            </p>
+            <ul class="">
+                <li>Creare WebSite custom pentru afacerea dumneavoastra</li>
+                <li>Creare Aplicatie mobila pentru iOS/Android</li>
+                <li>Optimizare SEO</li>
+                <li>Multe altele!</li>
+            </ul>
+            <hr class="stil" style="height: 15px;">
+            <section>
+              <div class="continut">
+                  <h3>Continut pagina (In Progress :) ):
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#CollapseExample" aria-expanded="false" aria-controls="CollapseExample">
+                      <i class="far fa-arrow-alt-circle-down"></i>
+                    </button> 
+                  </h3>
+                  <div class="collapse" id="CollapseExample">
+                    <div class="card card-body">
+                      <ul>
+                        <li>Formular login/register de accesare a website-ului</li>
+                        <li>Formular de inregistrare a clientilor intr-o baza de date</li>
+                        <li>Pagina de Pachete/Oferte/Promotii</li>
+                        <li>Pagina de review-uri</li>
+                        <li>Pagina cu informatii de contact</li>
+                        <li>And more... (ma mai gandesc :D)</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <p><strong> Site similar: </strong><a href="https://www.ibcromania.ro/" target="_blank">Click!</a></p>
+                  <p class="gray">Cuvinte cheie: Business, Business Consulting, Business Promoter, Business Growth, Business Growing, Business Offers</p>
+                  
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <div class="section2 grid-item">
+        <table class="tabel ">
+          <thead>
+              <tr> 
+                  <th>ID</th>
+                  <th>Categorie</th>
+                  <th>Preț Normal</th>
+                  <th>Preț Reducere</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="linie">
+                  <td></td>
+                  <td>Adulți (21-60 Ani)</td>
+                  <td>150 RON</td>
+                  <td>120 RON</td>
+              </tr>
+              <tr class="linie">
+                  <td></td>
+                  <td>Seniori (60+ Ani)</td>
+                  <td>100 Ron</td>
+                  <td>80 Ron</td>
+              </tr>
+              <tr class="linie">
+                  <td></td>
+                  <td>Adolescenti (14-21 Ani)</td>
+                  <td>Gratis</td>
+                  <td>Gratis</td>
+              </tr>
+              <tr class="linie"> 
+                  <td></td>
+                  <td>Studenți</td>
+                  <td>Gratis</td>
+                  <td>Gratis</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+      <div class="section3 grid-item">3</div>
+      <div class="section4 grid-item">4</div>
+      <div class="section5 grid-item">
+        <%- include("../fragments/video.ejs") %>
+
+      </div>
+      <div class="section6 grid-item">
+        <h2">Date utilizator</h2>
+        <table>
+          <tr>
+            <td>Nume</td>
+            <td>Trache</td>
+          </tr>
+          <tr>
+            <td>Prenume</td>
+            <td>Andrei</td>
+          </tr>
+          <tr>
+            <td>Adresa IP</td>
+            <td><%- locals.userIp %> </td>
+          </tr>
+
+        </table>
+      </div>
+      <div class="section7 grid-item">7</div>
+      <div class="section8">
+        <!-- <main>
+          <div class="container-fluid row">
+            <div class="col-sm-12 col-md-12 col-xl-6 text-center">
+              <h3 class="fw-bold">Tips from experts:</h3>
+              <iframe style="border: 2px solid gray; border-radius: 5px;" width="624" height="376" src="https://www.youtube.com/embed/FJpyuLFW9FY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-12 col-md-12 col-xl-6 text-center">
+              <h3 class="fw-bold">
+                <a href="https://www.youtube.com/embed/_jNqAfGzWS0" target="iframe_a" style="text-decoration: none;">
+                  How to find a Mentor (Click to show the video):
+                </a>
+              </h3>
+              <iframe style="border: 2px solid gray; border-radius: 5px;" width="624" name="iframe_a" height="376" src="https://this-page-intentionally-left-blank.org/" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-12 col-md-12 col-xl-12 text-center p-4 fw-bold">
+              <a href="https://www.youtube.com/embed/-ZwQtICNbRc" target="iframe_a" style="text-decoration: none;">
+                Click to add another link into the iframe!@!
+              </a>
+            </div>
+          </div>
+        </main> -->
+        <div class="text-center">
+          <div class='row2'>      
+            <div class='flexboxitem'>
+              <a href="https://www.youtube.com/embed/FJpyuLFW9FY" target="iframe_a">Target1</a>
+            </div>
+            <div class='flexboxitem'>
+              <a href="https://www.youtube.com/embed/_jNqAfGzWS0" target="iframe_a" >Target2</a>
+            </div>
+            <div class='flexboxitem'>
+              <a href="https://www.youtube.com/embed/-ZwQtICNbRc" target="iframe_a" >Target3</a>
+            </div>
+          </div>
+    
+          <div class='row1'>
+            <div class='column2'>
+              <iframe style="border: 2px solid gray; border-radius: 5px;" width="624" name="iframe_a" height="376" src="https://this-page-intentionally-left-blank.org/" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+    <a href="#">
+      <div class="to-top make-it-slow">
+        <div class="triangle">
+          <div class="triangle1">
+  
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="banner">
+      This is an university project
+    </div>  
+    <%- include("../fragments/gallery.ejs") %>
+    <%- include("../fragments/footer.ejs") %>
+
+
+</body>
+</html>

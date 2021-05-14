@@ -1,0 +1,33 @@
+{
+  "name": "proiect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glower47/PROIECT-TEHNICI-WEB.git"
+  },
+  "keywords": [
+    "business",
+    "promoting",
+    "afacere",
+    "success"
+  ],
+  "author": "Andrei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glower47/PROIECT-TEHNICI-WEB/issues"
+  },
+  "homepage": "https://github.com/glower47/PROIECT-TEHNICI-WEB#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "request-ip": "^2.1.3",
+    "sharp": "^0.28.2"
+  }
+}

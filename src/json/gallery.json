@@ -1,0 +1,12 @@
+{
+    "myPath":"src/images/galleryImages",
+    "images": [
+        {
+            "relPath":"dim1.jpg",
+            "description":"picture",
+            "time":"morning",
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        }
+    ]
+}

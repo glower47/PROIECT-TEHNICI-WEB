@@ -1,8 +1,0 @@
-.stil{
-    border: 0;
-    height: 30px;
-    background: radial-gradient(circle 10px, var(--color1) 4px, var(--color5) 6px, transparent 2px),
-                linear-gradient(to bottom, var(--color2) 20%, var(--color1) 50%,var(--color2) 80%);
-    margin: 10px;
-                
-  }

@@ -1,0 +1,89 @@
+#menu {
+    display: block;
+  }
+  
+  /* ascuns*/
+  
+  ul.meniu {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grid-container {
+    display: grid;
+    background-color: var(--color2);
+    padding: 20px;
+    grid-template-areas: "section1" "section2" "section3" "section4" "section5" "section6" "section7" "section8";
+    grid-gap: 20px;
+  }
+  
+  .section1 {
+    grid-area: section1;
+  }
+  
+  .section5 {
+    grid-area: section5;
+  }
+  
+  .section6 {
+    grid-area: section6;
+  }
+  
+  .section7 {
+    grid-area: section7;
+  }
+  
+  .section3 {
+    grid-area: section3;
+  }
+  
+  .section2 {
+    grid-area: section2;
+  }
+  
+  .section4 {
+    grid-area: section4;
+  }
+  
+  .section8 {
+    grid-area: section8;
+  }
+  
+  /*facem vizibil*/
+  
+  #ch-menu:checked + ul.meniu {
+    display: block;
+    animation: apare 0.3s;
+    transform-origin: 0 0;
+  }
+  
+  /*toata latimea containerului*/
+  
+  nav ul.meniu {
+    li {
+      width: 100%;
+    }
+  
+    > li ul {
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+    }
+  }
+  
+  /*nu impingem restul continutului*/
+  
+  @keyframes apare {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .make-it-slow, .home {
+    display: none;
+  }
