@@ -1,21 +1,24 @@
 <head>
     <%- include("../fragments/standardHead.ejs") %>
-        <link rel="stylesheet" href="/src/styles/gallery.css">
+        <link rel="stylesheet" href="/src/Styling/gallery.css">
 </head>
 
 <h2>Galerie</h2>
 
 <div class="grid">
+    <div>
+        <% for (let img of locals.images) {%>
 
-    <% for (let img of locals.images) {%>
-
-        <picture class="gridElement">
-            <source srcset="<%- img.small%>" media="(max-width:1000px)">
-            <img src="<%- img.normal %>" alt="<%- img.description %> ">
-            <figcaption>
-                <%- img.description %> <small>licensed by <a href="<%- img.link%>" ><%- img.license%></a></small>
-            </figcaption>
-        </picture>
-
+            <picture class="gridElement">
+                <source srcset="<%- img.small%>" media="(max-width:1000px)">
+                <img src="<%- img.normal %>" alt="<%- img.description %> ">
+                <figcaption>
+                    <%- img.description %> <small>licensed by <a href="<%- img.link%>" ><%- img.license%></a></small>
+                </figcaption>
+            </picture>
+    
         <% } %>
+    </div>
+
+    
 </div>

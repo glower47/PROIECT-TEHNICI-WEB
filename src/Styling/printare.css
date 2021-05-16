@@ -1,0 +1,108 @@
+#watermark{
+    display:none;
+}
+@media print{
+    #watermark
+    {
+        display: block;
+        position: fixed;
+        bottom:0;
+        color:rgba(0,0,0,0.4);
+        right:0;
+    }
+    #watermark::after{
+        
+        opacity:0.5;
+        padding:5px;
+        display: block;
+        width:100px;
+        height:2cm;
+        background: white;
+        border:2px double black;
+        opacity:0.65;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border-right:none;
+        content:"MNO MOMENT";
+    }
+    .gotop{
+        display:none;
+    }
+    i{
+        text-decoration: none !important;
+        color: black !important;
+    }
+    .banner
+    {
+        border: 0.6rem dotted black !important;
+        position:absolute !important;
+        height:20px;
+        width: 80%;
+        left:140px;
+        top:0px !important;
+        text-align: center;
+        animation: none;
+        visibility: visible;
+    }
+    .container-image{
+
+        display:hidden;
+    }
+    h1.ptzona1{
+    
+        margin-left:43.5% !important;
+        margin-top:50% !important;
+        font-size:36px;
+        text-decoration: underline !important;
+        page-break-after: always;
+        color:black;
+      }
+    nav{
+        display:none;
+    }
+    img{
+        display:none;
+    }
+    iframe{
+        display:none;
+    }
+    .zonaF{
+        page-break-before: always !important;
+
+    }
+    .tablet{
+       display:none !important;
+    }
+
+    figure{
+        display:none !important;
+    }
+    .row {
+        display:none !important;
+        
+      }
+      
+      .column {
+        display: none !important;
+      
+      }
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom:2cm;
+    margin-top:2cm;
+    counter-increment: page;
+        
+}
+@page:left{
+
+    margin-left:2.5cm;
+    margin-right:0.5cm;
+    border-radius: 20cm;
+}
+@page:right{
+
+    margin-right:2.5cm;
+    margin-left:0.5cm;
+}
