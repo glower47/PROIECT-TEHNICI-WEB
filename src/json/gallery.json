@@ -1,17 +1,133 @@
 {
-    "myPath":"src/images/galleryImages",
+    "cale_galerie":"src/images/galleryImages",
     "images": [
         {
-            "relPath":"dim1.jpg",
-            "description":"picture",
-            "time":"morning",
+            "cale_fisier":"dim1.jpg",
+            "titlu":"picture",
+            "ora_start": 0,
+            "ora_final": 14,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
             "license":"none",
             "licenseLink":"https://creativecommons.org/licenses/"
         },
         {
-            "relPath":"dim2.jpg",
-            "description":"picture",
-            "time":"morning",
+            "cale_fisier":"dim2.jpg",
+            "titlu":"picture",
+            "ora_start": 0,
+            "ora_final": 14,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"dim3.jpg",
+            "titlu":"picture",
+            "ora_start": 0,
+            "ora_final": 14,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"dim4.jpg",
+            "titlu":"picture",
+            "ora_start": 0,
+            "ora_final": 14,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"dim5.jpg",
+            "titlu":"picture",
+            "ora_start": 0,
+            "ora_final": 14,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"dim6.jpg",
+            "titlu":"picture",
+            "ora_start": 0,
+            "ora_final": 14,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after1.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after2.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after3.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after3.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after3.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after3.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
+            "license":"none",
+            "licenseLink":"https://creativecommons.org/licenses/"
+        },
+        {
+            "cale_fisier":"after3.jpg",
+            "titlu":"picture",
+            "ora_start": 14,
+            "ora_final": 24,
+            "alt" : "alt",
+            "text_descriere":"descriere" ,
             "license":"none",
             "licenseLink":"https://creativecommons.org/licenses/"
         }

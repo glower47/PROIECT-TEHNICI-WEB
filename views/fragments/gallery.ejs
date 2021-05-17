@@ -1,24 +1,29 @@
-<head>
-    <%- include("../fragments/standardHead.ejs") %>
-        <link rel="stylesheet" href="/src/Styling/gallery.css">
-</head>
 
 <h2>Galerie</h2>
 
-<div class="grid">
-    <div>
-        <% for (let img of locals.images) {%>
-
-            <picture class="gridElement">
-                <source srcset="<%- img.small%>" media="(max-width:1000px)">
-                <img src="<%- img.normal %>" alt="<%- img.description %> ">
-                <figcaption>
-                    <%- img.description %> <small>licensed by <a href="<%- img.link%>" ><%- img.license%></a></small>
-                </figcaption>
-            </picture>
+<div class="">
+    <section class="galerie_statica">
+        <% var how_many_photos=0;%>
+        <% for (let imag of locals.images){%>
+        <% var d = new Date() %>
+        <% if(how_many_photos == 5 || how_many_photos == 6){ %>
+            <div></div>
+            <% how_many_photos++;%>
+       <% } else if(((d.getHours() >= parseInt(imag.ora_start)) || (d.getHours() <= parseInt(imag.ora_sfarsit))) && how_many_photos<12) {%>
+            <figure>
+                <picture>
+    
+                    <source srcset="<%- imag.mic %>" media="(max-width:500px)"/>
+                    <source srcset="<%- imag.mediu %>" media="(max-width:1200px)"/>
+                    <img src=<%- imag.mare %> alt="<%imag.alt%>" title="<%imag.text_descriere%>">
+    
+                </picture>
+                <figcaption><% imag.titlu%></figcaption>
+            </figure>
+            <% how_many_photos++; } %>
     
         <% } %>
-    </div>
+    </section>
 
     
 </div>
