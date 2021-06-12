@@ -4,6 +4,11 @@ const path = require('path');
 const fs = require('fs');
 const sharp = require('sharp');
 var requestIp = require('request-ip');
+const {Client} = require("pg")
+
+const client = new Client({host:"localhost", database:"mydata", user:"andrei", password:"123456",port:5432})
+client.connect();
+
 
 server.set("view engine", "ejs");
 
@@ -112,6 +117,13 @@ server.get("/index", (req, res) => {
         images: galleryPaths
     })
 });
+
+server.get("/produse", function (req, res) {
+
+    const result = client.query("select * from tabel_pachete", function (err, queryResult) {
+        res.render("pages/produse.ejs", {produse: queryResult.rows});
+    });
+})
 
 server.get("/*", function (req, res) {
 
