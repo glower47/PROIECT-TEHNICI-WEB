@@ -121,7 +121,9 @@ server.get("/index", (req, res) => {
 server.get("/produse", function (req, res) {
 
     const result = client.query("select * from tabel_pachete", function (err, queryResult) {
+        console.log(queryResult)
         res.render("pages/produse.ejs", {produse: queryResult.rows});
+        
     });
 })
 

@@ -1,6 +1,8 @@
 var rangeMin = document.getElementById("pretMin");
 var rangeMax = document.getElementById("pretMax");
 
+
+
 rangeMin.addEventListener("change", function(){
     updateMinTextInput(rangeMin.value);
 });

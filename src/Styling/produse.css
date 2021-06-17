@@ -39,6 +39,7 @@ li {
 }
 
 .sortBtn {
+    font-weight: bold;
     border-radius: 10px;
     top: 8px;
     right: 8px;
@@ -46,7 +47,7 @@ li {
     padding: 1em;
     border: 1px solid;
     margin-right: 8px;
-    color: var(--color5);
+    color: white;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
     background-color: var(--color3);
     transition: background-color 1s;
@@ -54,19 +55,21 @@ li {
 }
 
 .sortBtn:hover {
-    background-color: var(--color2);
+    background-color: var(--color1);
 }
 
 .resetBtn {
+    font-weight: bold;
+
     border-radius: 10px;
     top: 8px;
     right: 8px;
     width: fit-content;
     padding: 1em;
     border: 1px solid;
-    color: var(--color5);
+    color: white;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-    background-color: var(--color2);
+    background-color: var(--color1);
     transition: background-color 1s;
     user-select: none;
 }
@@ -117,4 +120,50 @@ li {
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
     background-color: var(--color2);
     user-select: none;
+}
+
+
+.template_container{
+    border: 4px solid rgb(69, 48, 253);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(255, 255, 255);
+    color: black;
+}
+
+
+.bronz {
+    background-color: #cd7f32;
+}
+
+.cupru {
+    background-color: #b36700;
+}
+
+.argint {
+    background-color: #C0C0C0;
+}
+
+.aur {
+    background-color: #FFD700;
+}
+
+.platina {
+    background-color: #e5e4e2;
+}
+.premium {
+    background-color: rgb(255, 114, 185);
+}
+
+.template_container p {
+    font-weight: bold;
+    color: rgb(0, 65, 102);
+}
+.premium p{
+    color: black;
+}
+
+.bronz p {
+    color: black;
 }
