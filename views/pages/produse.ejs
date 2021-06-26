@@ -29,14 +29,16 @@
         <div id="checkBoxes">
 
             <span><input type="checkbox" name="stoc" id="stoc">In Stoc</span>
-            <span><input type="checkbox" name="premium" id="premium">Categorie Premium</span>
-            <span><input type="checkbox" name="standard" id="standard"> Categorie Standard</span>
+            <input type="radio" id="premium" name="main" value="Premium">Categorie Premium<br>
+            <input type="radio" id="standard" name="main" value="Standard">Categorie Standard<br>
+            <!-- <span><input type="checkbox" name="premium" id="premium">Categorie Premium</span>
+            <span><input type="checkbox" name="standard" id="standard"> Categorie Standard</span> -->
 
 
         </div>
 
         <div class="buttons">
-            <div class="sortBtn" id="filter">Filtreaza</div>
+            <a class="sortBtn" id="filter" onclick="filtreaza()">Filtreaza</a>
             <div class="sortBtn" id="aSort">Sortare ascendenta</div>
             <div class="sortBtn" id="dSort">Sortare descendenta</div>
             <div class="sortBtn" id="calcBtn">Calculare</div>
@@ -45,20 +47,29 @@
 
     </div>
 
-    <div>
-        <% for(var i = 0; i < locals.produse.length; i+=3){ 
+    <div id="produsee">
+        <% for(var i = 0; i < 20; i+=3){
+            // console.log({VERIFICARE: locals.produse})
             var produs1 = locals.produse[i]
             var produs2 = locals.produse[i + 1]
             var produs3 = locals.produse[i + 2]
-            var data1 = new Date(produs1.data_valabilitate)
-            var data2 = new Date(produs2.data_valabilitate)
-            var data3 = new Date(produs3.data_valabilitate) 
-            // if(produs1.categorie == "Premium"){
-            //     document.getElementById('card1').className += 'gold';
-            // }
+            
+            var data1
+            var data2
+            var data3
+            if(produs1 !== undefined){
+                data1 = new Date(produs1.data_valabilitate)
+            }
+            if(produs2 !== undefined){
+                data2 = new Date(produs2.data_valabilitate)
+            }
+            if(produs1 !== undefined){
+                data3 = new Date(produs3.data_valabilitate)
+            }
             %>
             <div class="container row" style="margin-left: auto; margin-right: auto">
-                <div class="col-sm template_container m-3 <%- produs1.categorie == "Premium" ? "premium" : ''%> 
+                <% if(produs1 !== undefined){ %>
+                <a href="/produs/<%- produs1.id %> " class="col-sm template_container m-3 <%- produs1.categorie == "Premium" ? "premium" : ''%> 
                                                           <%- produs1.pachet == "Bronz" ? "bronz" : ''%> 
                                                           <%- produs1.pachet == "Cupru" ? "cupru" : ''%> 
                                                           <%- produs1.pachet == "Argint" ? "argint" : ''%> 
@@ -71,8 +82,9 @@
                     <p>Pret: <%- produs1.pret%> $</p>
                     <p>Pachet: <%- produs1.pachet%></p>
                     <p>Conceput pentru: <%- produs1.conceput_pentru%></p>
-                </div>
-                <div class="col-sm template_container m-3 <%- produs2.categorie == "Premium" ? "premium" : ''%> 
+                </a><% } %>
+                <% if(produs2 !== undefined){ %>
+                <a href="/produs/<%- produs2.id %> " class="col-sm template_container m-3 <%- produs2.categorie == "Premium" ? "premium" : ''%> 
                                                           <%- produs2.pachet == "Bronz" ? "bronz" : ''%> 
                                                           <%- produs2.pachet == "Cupru" ? "cupru" : ''%> 
                                                           <%- produs2.pachet == "Argint" ? "argint" : ''%> 
@@ -85,8 +97,9 @@
                     <p>Pret: <%- produs2.pret%> $</p>
                     <p>Pachet: <%- produs2.pachet%></p>
                     <p>Conceput pentru: <%- produs2.conceput_pentru%></p>
-                </div>
-                <div class="col-sm template_container m-3 <%- produs3.categorie == "Premium" ? "premium" : ''%> 
+                </a><% } %>
+                <% if(produs3 !== undefined){ %>
+                <a href="/produs/<%- produs3.id %> " class="col-sm template_container m-3 <%- produs3.categorie == "Premium" ? "premium" : ''%> 
                                                           <%- produs3.pachet == "Bronz" ? "bronz" : ''%> 
                                                           <%- produs3.pachet == "Cupru" ? "cupru" : ''%> 
                                                           <%- produs3.pachet == "Argint" ? "argint" : ''%> 
@@ -99,7 +112,7 @@
                     <p>Pret: <%- produs3.pret%> $</p>
                     <p>Pachet: <%- produs3.pachet%></p>
                     <p>Conceput pentru: <%- produs3.conceput_pentru%></p>
-                 </div>
+                 </a><% } %>
             </div>
         <% } %>
     </div>

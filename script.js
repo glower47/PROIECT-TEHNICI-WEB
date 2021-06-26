@@ -2,12 +2,33 @@ const createServerExpress = require('express');
 const server = createServerExpress();
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors')
 const sharp = require('sharp');
 var requestIp = require('request-ip');
-const {Client} = require("pg")
+const {Client, ClientBase} = require("pg");
+const { query } = require('express');
+server.use(createServerExpress.json());
+server.use(cors());
 
 const client = new Client({host:"localhost", database:"mydata", user:"andrei", password:"123456",port:5432})
 client.connect();
+
+server.post("/receiver", function(req, res) {
+    // console.log(req);
+   
+    const result = client.query(req.body.query, function (err, queryResult) {
+        // res.end()
+        // res.json(queryResult.rows);
+        console.log({queryResult: queryResult.rows == undefined})
+        res.render("pages/produse.ejs", {produse: queryResult.rows == undefined ? {rows: []} : queryResult.rows}, (eroare, html) => {
+            // console.log({RASPUNS: html})
+            // res.set('Content-Type', 'text/html');
+            // res.render("./pages/produse");
+            // res.send(html)
+        });
+});
+})
+
 
 
 server.set("view engine", "ejs");
@@ -123,6 +144,13 @@ server.get("/produse", function (req, res) {
     const result = client.query("select * from tabel_pachete", function (err, queryResult) {
         console.log(queryResult)
         res.render("pages/produse.ejs", {produse: queryResult.rows});
+        
+    });
+})
+server.get("/produs/:id", function (req, res) {
+    const result = client.query("select * from tabel_pachete where id=" + req.params.id, function (err, queryResult) {
+        // console.log(queryResult)
+        res.render("pages/produs.ejs", {produse: queryResult.rows});
         
     });
 })
