@@ -15,18 +15,19 @@ client.connect();
 
 server.post("/receiver", function(req, res) {
     // console.log(req);
-   
-    const result = client.query(req.body.query, function (err, queryResult) {
+    client.query(req.body.query, function (err, queryResult) {
         // res.end()
         // res.json(queryResult.rows);
-        console.log({queryResult: queryResult.rows == undefined})
+        // console.log({queryResult: queryResult.rows})
         res.render("pages/produse.ejs", {produse: queryResult.rows == undefined ? {rows: []} : queryResult.rows}, (eroare, html) => {
             // console.log({RASPUNS: html})
             // res.set('Content-Type', 'text/html');
             // res.render("./pages/produse");
             // res.send(html)
         });
-});
+        
+    });
+    res.end()
 })
 
 
