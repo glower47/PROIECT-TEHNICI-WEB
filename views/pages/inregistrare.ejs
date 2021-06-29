@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("../fragments/standardHead.ejs") %>
+        <title>Produse</title>
+</head>
+
+<body>
+    <%- include("../fragments/header.ejs") %>
+
+        <div class="afisaj">
+            <h1>Inregistrare utilizator</h1>
+
+            <% if (locals.err !="" ) { %>
+                <form id="form_inreg" method="post" class="date" action="/inreg" id="inregistrare"
+                    enctype="multipart/form-data">
+                    <p>
+                        <label>
+                            Username: <input type="text" name="username"
+                                value="prof<%= Math.floor(Math.random()*100000) %>" required pattern="[A-Za-z0-9]+">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Nume: <input type="text" name="nume" value="Gogulescu" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Prenume: <input type="text" name="prenume" value="Gogu" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Parola: <input id="parl" type="password" name="parola" value="" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Reintroduceti parola: <input id="rparl" type="password" name="rparola" value="" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Email: <input type="text" name="email" value="profprofprof007@gmail.com" size="50">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Culoare text chat: <select name="culoareText">
+                                <option value="red">rosu</option>
+                                <option value="green">verde</option>
+                                <option value="blue">albastru</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Poza: <input type="file" name="poza">
+                        </label>
+                    </p>
+                    <p>
+                        <input type="submit" value="Trimite">
+                        <input type="reset" value="Reseteaza">
+                    </p>
+                </form>
+                <% } %>
+                    <% if(locals.raspuns) { %>
+                        <%- locals.raspuns+"<br />"%>
+                        <% } %>
+                            <% if(locals.err) { %>
+                                <%- locals.err %>
+                                    <% } %>
+        </div>
+
+        <%- include("../fragments/footer.ejs") %>
+            <script src="/src/scripts/filter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/Styling/useri.css" type="text/css" />
+    <%- include("../fragments/standardHead.ejs") %>
+    
+</head>
+<body>
+    <%- include("../fragments/header.ejs") %>
+
+    <div class="afisaj">
+        <h2>Useri</h2>
+
+		<table id="useri">
+		  <tr>
+			<th>id</th><th>Nume</th><th>Prenume</th><th>Data</th><th>Rol</th>
+		  </tr>
+
+		  <% for (var i = 0; i < useri.length; i++) { 
+				if(useri[i].rol=="comun"){
+				%>
+				<tr>
+				  <td><%= useri[i].id %></td>
+				  <td><%= useri[i].nume %></td>
+				  <td><%= useri[i].email %></td>
+				  <%  
+					d=new Date(useri[i].data_adaugare)
+					sir_data=`${d.getDate()}/${d.getMonth()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+				  %>
+				  <td><%=  sir_data %></td>
+				   <td><%=  useri[i].rol %></td>
+				</tr> 
+   
+				<% } %>			
+		  <% } %>
+		</table>
+		
+		<p>Sterge utilizator</p>
+		<form id="sterge" method="post" action="/sterge_utiliz">
+			<label>
+				Id: <input type="text" name="id_utiliz" value="">
+			</label>
+			
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+    <%- include("../fragments/footer.ejs") %>
+</body>
+</html>

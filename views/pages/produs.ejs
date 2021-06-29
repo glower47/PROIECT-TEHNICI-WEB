@@ -10,33 +10,42 @@
 <body>
     <%- include("../fragments/header.ejs") %>
 
-    <div>
+    <div style="margin-left: 500px; margin-right: auto">
         <% for(var i = 0; i < locals.produse.length; i+=3){
             var produs1 = locals.produse[i]
-          
             var data1 = new Date(produs1.data_valabilitate)
              
             // if(produs1.categorie == "Premium"){
             //     document.getElementById('card1').className += 'gold';
             // }
             %>
-            <div class="container row" style="margin-left: auto; margin-right: auto">
-                <div class="col-sm template_container m-3 <%- produs1.categorie == "Premium" ? "premium" : ''%> 
+            <div style="text-decoration: none; font-size: 18px; width: 50%; text-align: center;" class="col-sm template_container m-3 <%- produs1.categorie == "Premium" ? "premium" : ''%> 
                                                           <%- produs1.pachet == "Bronz" ? "bronz" : ''%> 
                                                           <%- produs1.pachet == "Cupru" ? "cupru" : ''%> 
                                                           <%- produs1.pachet == "Argint" ? "argint" : ''%> 
                                                           <%- produs1.pachet == "Aur" ? "aur" : ''%> 
                                                           <%- produs1.pachet == "Platina" ? "platina" : ''%>"> 
-                    <p class="text-center"><%- produs1.nume %> </p>
-                    <p class="">In stoc: <%- String(produs1.in_stoc).toUpperCase() %> </p>
-                    <p>Descriere: <%- produs1.descriere%> </p>
-                    <p>Valabil pana la: <%- data1.getDate()  + "-" + data1.getMonth() + "-" + data1.getFullYear() %> </p>
-                    <p>Pret: <%- produs1.pret%> $</p>
-                    <p>Pachet: <%- produs1.pachet%></p>
-                    <p>Conceput pentru: <%- produs1.conceput_pentru%></p>
+                    <h3 class="text-center"><%- produs1.nume %> </h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>Categorie: <%- produs1.categorie%></p>
+                            <p>**IMAGINE**</p>
+                        </div>
+                        <div class="col-sm">
+                            <p class="">In stoc: <%- String(produs1.in_stoc).toUpperCase() %> </p>
+                            
+                            <time>Valabil pana la: <%- data1.getDate()  + "-" + data1.getMonth() + "-" + data1.getFullYear() %> </time>
+                            <p>Pret: <%- produs1.pret%> $</p>
+                            <p>Pachet: <%- produs1.pachet%></p>
+                            <p>Conceput pentru: <%- produs1.conceput_pentru%></p>
+                        </div>
+                        <hr>
+                        <p>Descriere: <%- produs1.descriere%> </p>
+                        
+                    </div>
+                    
                 </div>
-               
-            </div>
         <% } %>
     </div>
 

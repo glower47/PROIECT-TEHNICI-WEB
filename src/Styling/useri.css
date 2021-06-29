@@ -1,0 +1,9 @@
+#useri{
+	border-collapse:collapse;
+}
+
+#useri td, #useri th{
+	border:1px solid black;
+	padding:5px;
+	
+}

@@ -19,8 +19,9 @@ function updateMaxTextInput(val) {
     document.getElementById('valueMax').innerHTML=val; 
 }
 var Filters = {};
+var Produse = {};
 
-async function filtreaza(){
+function filtreaza(){
     var Filters = {};
 
     Filters.minPret = document.getElementById("pretMin").value
@@ -53,10 +54,16 @@ async function filtreaza(){
 
     let dataToSend = {query: query};
     let fetchOptions = {method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify(dataToSend)};
-    let myFetch = await fetch("/receiver", fetchOptions);
-
-    // console.log(myFetch)
+    fetch("/receiver", fetchOptions).then(response => {
+        console.log({RESPONSE: response})
+    });
 }
+
+function calculeazaTotal(){
+
+}
+
+
 
 Filters.minPret = document.getElementById("pretMin").value
 Filters.maxPret = document.getElementById("pretMax").value

@@ -38,11 +38,11 @@
         </div>
 
         <div class="buttons">
-            <a class="sortBtn" id="filter" onclick="filtreaza()">Filtreaza</a>
-            <div class="sortBtn" id="aSort">Sortare ascendenta</div>
-            <div class="sortBtn" id="dSort">Sortare descendenta</div>
-            <div class="sortBtn" id="calcBtn">Calculare</div>
-            <div class="resetBtn" id="reset">Reset</div>
+            <button class="sortBtn" id="filter" onclick="filtreaza()">Filtreaza</button>
+            <button class="sortBtn" id="aSort">Sortare ascendenta</button>
+            <button class="sortBtn" id="dSort">Sortare descendenta</button>
+            <button class="sortBtn" id="calcBtn" onclick="calculeazaTotal()">Calculare</button>
+            <button class="resetBtn" id="reset">Reset</button>
         </div>
 
     </div>
@@ -54,65 +54,114 @@
             var produs2 = locals.produse[i + 1]
             var produs3 = locals.produse[i + 2]
             
-            var data1
-            var data2
-            var data3
-            if(produs1 !== undefined){
-                data1 = new Date(produs1.data_valabilitate)
-            }
-            if(produs2 !== undefined){
-                data2 = new Date(produs2.data_valabilitate)
-            }
-            if(produs1 !== undefined){
-                data3 = new Date(produs3.data_valabilitate)
-            }
+            var data1 = new Date()
+            var data2 = new Date()
+            var data3 = new Date()
+            console.log({PRODUS1: produs1 == undefined})
+            console.log({PRODUS2: produs2 == undefined})
+            console.log({PRODUS3: produs3 == undefined})
+
+            // if(produs1 !== undefined){
+            //     data1 = new Date(produs1.data_valabilitate)
+            //     console.log({data_valabilitate: produs1.data_valabilitate})
+            // }
+            // if(produs2 !== undefined){
+            //     data2 = new Date(produs2.data_valabilitate)
+            //     console.log({data_valabilitate: produs1.data_valabilitate})
+            // }
+            // if(produs1 !== undefined){
+            //     data3 = new Date(produs3.data_valabilitate)
+            //     console.log({data_valabilitate: produs1.data_valabilitate})
+            // }
             %>
             <div class="container row" style="margin-left: auto; margin-right: auto">
                 <% if(produs1 !== undefined){ %>
-                <a href="/produs/<%- produs1.id %> " class="col-sm template_container m-3 <%- produs1.categorie == "Premium" ? "premium" : ''%> 
+                <a href="/produs/<%- produs1.id %> " style="text-decoration: none; font-size: 18px;" class="col-sm template_container m-3 <%- produs1.categorie == "Premium" ? "premium" : ''%> 
                                                           <%- produs1.pachet == "Bronz" ? "bronz" : ''%> 
                                                           <%- produs1.pachet == "Cupru" ? "cupru" : ''%> 
                                                           <%- produs1.pachet == "Argint" ? "argint" : ''%> 
                                                           <%- produs1.pachet == "Aur" ? "aur" : ''%> 
                                                           <%- produs1.pachet == "Platina" ? "platina" : ''%>"> 
-                    <p class="text-center"><%- produs1.nume %> </p>
-                    <p class="">In stoc: <%- String(produs1.in_stoc).toUpperCase() %> </p>
-                    <p>Descriere: <%- produs1.descriere%> </p>
-                    <p>Valabil pana la: <%- data1.getDate()  + "-" + data1.getMonth() + "-" + data1.getFullYear() %> </p>
-                    <p>Pret: <%- produs1.pret%> $</p>
-                    <p>Pachet: <%- produs1.pachet%></p>
-                    <p>Conceput pentru: <%- produs1.conceput_pentru%></p>
-                </a><% } %>
+                    <h3 class="text-center"><%- produs1.nume %> </h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>Categorie: <%- produs1.categorie%></p>
+                            <p>**IMAGINE**</p>
+                        </div>
+                        <div class="col-sm">
+                            <p class="">In stoc: <%- String(produs1.in_stoc).toUpperCase() %> </p>
+                            
+                            <time>Valabil pana la: <%- data1.getDate()  + "-" + data1.getMonth() + "-" + data1.getFullYear() %> </time>
+                            <p>Pret: <%- produs1.pret%> $</p>
+                            <p>Pachet: <%- produs1.pachet%></p>
+                            <p>Conceput pentru: <%- produs1.conceput_pentru%></p>
+                        </div>
+                        <hr>
+                        <p>Descriere: <%- produs1.descriere%> </p>
+                        
+                    </div>
+                    
+                </a><% }else { %>
+                    <div>AAA</div> <%  }  %>
                 <% if(produs2 !== undefined){ %>
-                <a href="/produs/<%- produs2.id %> " class="col-sm template_container m-3 <%- produs2.categorie == "Premium" ? "premium" : ''%> 
+                <a href="/produs/<%- produs2.id %> " style="text-decoration: none; font-size: 18px;" class="col-sm template_container m-3 <%- produs2.categorie == "Premium" ? "premium" : ''%> 
                                                           <%- produs2.pachet == "Bronz" ? "bronz" : ''%> 
                                                           <%- produs2.pachet == "Cupru" ? "cupru" : ''%> 
                                                           <%- produs2.pachet == "Argint" ? "argint" : ''%> 
                                                           <%- produs2.pachet == "Aur" ? "aur" : ''%> 
                                                           <%- produs2.pachet == "Platina" ? "platina" : ''%>"> 
-                    <p class="text-center"><%- produs2.nume %> </p>
-                    <p class="">In stoc: <%- String(produs2.in_stoc).toUpperCase() %> </p>
-                    <p>Descriere: <%- produs2.descriere%> </p>
-                    <p>Valabil pana la: <%- data2.getDate()  + "-" + data2.getMonth() + "-" + data2.getFullYear() %> </p>
-                    <p>Pret: <%- produs2.pret%> $</p>
-                    <p>Pachet: <%- produs2.pachet%></p>
-                    <p>Conceput pentru: <%- produs2.conceput_pentru%></p>
-                </a><% } %>
+                    <h3 class="text-center"><%- produs2.nume %> </h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>Categorie: <%- produs2.categorie%></p>
+                            <p>**IMAGINE**</p>
+                        </div>
+                        <div class="col-sm">
+                            <p class="">In stoc: <%- String(produs1.in_stoc).toUpperCase() %> </p>
+                            
+                            <time>Valabil pana la: <%- data2.getDate()  + "-" + data2.getMonth() + "-" + data2.getFullYear() %> </time>
+                            <p>Pret: <%- produs2.pret%> $</p>
+                            <p>Pachet: <%- produs2.pachet%></p>
+                            <p>Conceput pentru: <%- produs2.conceput_pentru%></p>
+                        </div>
+                        <hr>
+                        <p>Descriere: <%- produs2.descriere%> </p>
+                        
+                    </div>
+                    
+                </a><% }else { %>
+                    <div>AAA</div> <%  }  %>
                 <% if(produs3 !== undefined){ %>
-                <a href="/produs/<%- produs3.id %> " class="col-sm template_container m-3 <%- produs3.categorie == "Premium" ? "premium" : ''%> 
-                                                          <%- produs3.pachet == "Bronz" ? "bronz" : ''%> 
-                                                          <%- produs3.pachet == "Cupru" ? "cupru" : ''%> 
-                                                          <%- produs3.pachet == "Argint" ? "argint" : ''%> 
-                                                          <%- produs3.pachet == "Aur" ? "aur" : ''%> 
-                                                          <%- produs3.pachet == "Platina" ? "platina" : ''%>"> 
-                    <p class="text-center"><%- produs3.nume %> </p>
-                    <p class="">In stoc: <%- String(produs3.in_stoc).toUpperCase() %> </p>
-                    <p>Descriere: <%- produs3.descriere%> </p>
-                    <p>Valabil pana la: <%- data3.getDate()  + "-" + data3.getMonth() + "-" + data3.getFullYear() %> </p>
-                    <p>Pret: <%- produs3.pret%> $</p>
-                    <p>Pachet: <%- produs3.pachet%></p>
-                    <p>Conceput pentru: <%- produs3.conceput_pentru%></p>
-                 </a><% } %>
+                <a href="/produs/<%- produs3.id %> " style="text-decoration: none; font-size: 18px;" class="col-sm template_container m-3 <%- produs3.categorie == "Premium" ? "premium" : ''%> 
+                                              <%- produs3.pachet == "Bronz" ? "bronz" : ''%> 
+                                              <%- produs3.pachet == "Cupru" ? "cupru" : ''%> 
+                                              <%- produs3.pachet == "Argint" ? "argint" : ''%> 
+                                              <%- produs3.pachet == "Aur" ? "aur" : ''%> 
+                                              <%- produs3.pachet == "Platina" ? "platina" : ''%>"> 
+                    <h3 class="text-center"><%- produs3.nume %> </h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>Categorie: <%- produs3.categorie%></p>
+                            <p>**IMAGINE**</p>
+                        </div>
+                        <div class="col-sm">
+                            <p class="">In stoc: <%- String(produs3.in_stoc).toUpperCase() %> </p>
+                            
+                            <time>Valabil pana la: <%- data3.getDate()  + "-" + data3.getMonth() + "-" + data3.getFullYear() %> </time>
+                            <p>Pret: <%- produs3.pret%> $</p>
+                            <p>Pachet: <%- produs3.pachet%></p>
+                            <p>Conceput pentru: <%- produs3.conceput_pentru%></p>
+                        </div>
+                        <hr>
+                        <p>Descriere: <%- produs3.descriere%> </p>
+                        
+                    </div>
+                    
+                </a><% }else { %>
+                    <div>AAA</div> <%  }  %>
             </div>
         <% } %>
     </div>
