@@ -15,7 +15,7 @@ const { query } = require('express');
 server.use(createServerExpress.json());
 server.use(cors());
 
-const client = new Client({host:"localhost", database:"mydata", user:"andrei", password:"123456",port:5432})
+const client = new Client({host:"ec2-176-34-105-15.eu-west-1.compute.amazonaws.com", database:"d7s3iko9o8tosi", user:"gbzpussoftuekx", password:"d9554d09181fbe57f88e623374a21051888ba5bcef8e3bbb187be58fe2e5de02",port:5432, ssl: { require: true, rejectUnauthorized: false }})
 client.connect();
 
 server.post("/receiver", function(req, res) {
