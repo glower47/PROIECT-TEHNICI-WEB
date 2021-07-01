@@ -39,7 +39,7 @@
         border: 4px inset var(--color1);
         position:absolute !important;
         height:20px;
-        width: 70%;
+        width: 70%  ;
         left:140px;
         bottom:0 !important;
         text-align: center;

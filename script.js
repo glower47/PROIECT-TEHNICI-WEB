@@ -6,7 +6,6 @@ const cors = require('cors')
 const formidable = require('formidable');
 const nodemailer = require("nodemailer");
 const session = require('express-session');
-
 const sharp = require('sharp');
 var requestIp = require('request-ip');
 const crypto = require('crypto');

@@ -37,6 +37,8 @@ nav {
   position: sticky;
 }
 
+
+
 nav a, nav div {
   background: var(--color1);
   -webkit-transition: 0.3s;
